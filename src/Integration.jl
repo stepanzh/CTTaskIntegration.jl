@@ -1,6 +1,6 @@
 module Integration
 
-export Gauss, Kronrod, Midpoint, NewtonCotesClosed, Trapezoid, Simpson
+export Gauss, Kronrod, Midpoint, Trapezoid, Simpson
 export integrate
 
 abstract type AbstractMethod end
@@ -9,7 +9,6 @@ methods() = (
     Gauss,
     Kronrod,
     Midpoint,
-    NewtonCotesClosed,
     Trapezoid,
     Simpson,
 )
