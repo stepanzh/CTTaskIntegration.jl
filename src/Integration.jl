@@ -50,7 +50,7 @@ end
 "Формула средних прямоугольников"
 struct Midpoint <: AbstractMethod end
 
-__integrate_impl(method::Midpoint, f, a, b) = (b-a) * f((b-a)/2)
+__integrate_impl(method::Midpoint, f, a, b) = (b-a) * f((b+a)/2)
 
 # составной метод для формулы прямоугольников
 function __integrate_impl(method::Midpoint, f, a, b, nnodes)
