@@ -85,6 +85,6 @@ __integrate_impl(method::Gauss, f, a, b) = error("Не имплементиро�
 # Не забудьте пересчитать узлы и веса на отрезок [a, b]
 
 struct Kronrod <: AbstractMethod end
-__integrate_impl(f, a, b) = error("Не имплементирован")
+__integrate_impl(method::Kronrod, f, a, b) = error("Не имплементирован")
 
 end # module
