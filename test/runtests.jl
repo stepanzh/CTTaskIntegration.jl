@@ -45,6 +45,7 @@ end
     @testset "Составная квадратурная формула" begin
         @test integrate(linear, a, b, 10; method=Trapezoid()) == intlinear(a, b)
         @test integrate(atanintegrand, -5, 5, 1000; method=Trapezoid()) ≈ intatan() atol=1e-6
+        @test integrate(atanintegrand, -5, 5, 1000; method=Trapezoid()) != integrate(atanintegrand, -5, 5, 1000; method=Midpoint())
     end
 end
 
